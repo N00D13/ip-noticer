@@ -1,5 +1,6 @@
 import sys
 from .config import config
+from .noticer import noticer
 
 def initial():
 
@@ -10,7 +11,7 @@ def initial():
 
     if(installservice):
         config.checkServiceExisting()
-
+        noticer.startService()
 
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
