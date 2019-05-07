@@ -1,6 +1,6 @@
 import os.path
 
-class noticer:
+class config:
     configFile = os.path.expanduser('~/.ip-noticer/config.yml')
     statusFile = os.path.expanduser('~/.ip-noticer/status.yml')
     configFolder = os.path.expanduser('~/.ip-noticer')
@@ -11,15 +11,10 @@ class noticer:
 
     @staticmethod
     def checkConfigFileExisting():
-        if os.path.isfile(noticer.configFile):
-            print("Yes!")
-        else:
-            if not os.path.isdir(noticer.configFolder):
-                os.mkdir(noticer.configFolder)
-            
-            file = open(noticer.configFile, 'w+')
+        config.checkFileExisting(config.configFolder, config.configFile, True)
+        config.checkFileExisting(config.configFolder, config.statusFile, True)
 
-    @staticmethod
+    @staticmethod   
     def checkFileExisting(path, file, write):
         if os.path.isfile(file):
             return True

@@ -1,15 +1,15 @@
 import sys
-from .noticer import noticer
+from .config import config
 
 def initial():
 
     # ToDo: Abfragen ob config file gesetzt wurden, sonst setzen
-    noticer.checkConfigFileExisting()
+    config.checkConfigFileExisting()
 
     installservice = query_yes_no("Do you want to install ip-noticer as a service", "no")
 
     if(installservice):
-        noticer.checkServiceExisting()
+        config.checkServiceExisting()
 
 
 def query_yes_no(question, default="yes"):
