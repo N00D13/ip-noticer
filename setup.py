@@ -7,5 +7,6 @@ setup(name='ip-noticer',
       author='Alex Wellnitz',
       author_email='moin@wellnitz-alex.de',
       license='MIT',
-      packages=['ip-noticer'],
+      packages=['ipnoticer'],
+      scripts=['bin/ip-noticer'],
       zip_safe=False)
