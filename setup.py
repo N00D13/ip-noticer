@@ -9,4 +9,7 @@ setup(name='ip-noticer',
       license='MIT',
       packages=['ipnoticer'],
       scripts=['bin/ip-noticer'],
+      install_requires=[
+          'twisted',
+      ],
       zip_safe=False)
