@@ -12,6 +12,8 @@ def initial():
     if(installservice):
         config.checkServiceExisting()
         noticer.startService()
+    else:
+        noticer.startService()
 
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
